@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#game-board {
+    position: relative;
+    /* Allows absolute positioning within */
+    margin: 20px auto;
+    width: fit-content;
+}
+
+.dot,
+.line-horizontal,
+.line-vertical,
+.box {
+    position: absolute;
+}
+
+/* Dot styles */
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 3;
+    /* Dots on top */
+}
+
+/* Horizontal line styles */
+.line-horizontal {
+    width: 70px;
+    height: 6px;
+    background-color: lightgray;
+    cursor: pointer;
+    z-index: 2;
+    /* Lines below dots */
+}
+
+/* Vertical line styles */
+.line-vertical {
+    width: 6px;
+    height: 70px;
+    background-color: lightgray;
+    cursor: pointer;
+    z-index: 2;
+    /* Lines below dots */
+}
+
+/* Box styles */
+.box {
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border: 1px solid lightgray;
+    z-index: 1;
+    /* Boxes are at the bottom */
+}
