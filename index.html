@@ -6,26 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dots and Boxes Overlap</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Optional: Add styles for the scoreboard */
-        #scoreboard {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            margin-top: 10px;
-            font-size: 18px;
-        }
-
-        .score {
-            padding: 10px;
-            border: 1px solid black;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 
 <body>
-    <h1>Dots and Boxes - Overlap Fixed</h1>
+    <h1>Dots and Boxes</h1>
+
+    <div id="game">
+        <!-- Scoreboard -->
+        <div id="turn-counter">
+            <div id="current-turn">Current Turn: Player 1</div>
+        </div>
+
+        <!-- Game Board -->
+        <div id="game-board"></div>
+
+        <div id="scoreboard">
+            <div class="score" id="player1-score">Player 1 Score: 0</div>
+            <div class="score" id="player2-score">Player 2 Score: 0</div>
+        </div>
+    </div>
 
     <!-- Grid size selector -->
     <label for="grid-size">Select Grid Size:</label>
@@ -33,16 +32,6 @@
         <option value="5">5x5</option>
         <option value="7" selected>7x7</option> <!-- Default to 7x7 -->
     </select>
-
-    <!-- Scoreboard -->
-    <div id="scoreboard">
-        <div class="score" id="player1-score">Player 1 Score: 0</div>
-        <div class="score" id="player2-score">Player 2 Score: 0</div>
-        <div id="current-turn">Current Turn: Player 1</div>
-    </div>
-
-    <!-- Game Board -->
-    <div id="game-board"></div>
 
     <script src="script.js"></script>
 </body>

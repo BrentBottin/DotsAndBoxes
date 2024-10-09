@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Initialize game logic
 function initGame() {
     // initialize event listeners for turns
-    const verticalLines = document.querySelectorAll('.line-vertical', '.line-horizontal');
+    const verticalLines = document.querySelectorAll('.line-vertical');
     verticalLines.forEach(line => {
         line.addEventListener('click', function () {
             // If the line is already colored, ignore further clicks
@@ -114,7 +114,9 @@ function updateScoreDisplay() {
 
 function updateturnDisplay() {
     // Update the current turn display
-    document.getElementById('current-turn').innerText = `Current Turn: Player ${currentPlayer + 1}`;
+    document.getElementById('current-turn').innerText = `Current Turn: Player ${currentPlayer + 1} `;
+    document.getElementById('current-turn').style.backgroundColor = playerColors[currentPlayer];
+    document.getElementById('current-turn').style.border = `1px solid ${playerColors[currentPlayer]}`;
 }
 
 
@@ -124,6 +126,7 @@ function generateGridRepresentation(size, gameBoard) {
     gameRepresentation = { horizontals: new Array(size * (size - 1)).fill(0), verticals: new Array(size * (size - 1)).fill(0), boxes: new Array((size - 1) * (size - 1)).fill(-1), size: size };
     htlmElementToRepresentationLink = { horizontals: [], verticals: [] }
     htlmElementToRepresentationLink = { boxes: new Array((size - 1) * (size - 1)).fill(null) }
+    document.getElementById('game').style.width = `${5 * size}%`
 
     const cellSize = 70; // Each box/line/dot will occupy 50x50px space
     const gridSizePx = (size - 1) * cellSize; // Total grid size

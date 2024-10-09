@@ -3,11 +3,76 @@ body {
     text-align: center;
 }
 
+#game {
+    border: 5px solid black;
+    /* Add the border */
+    padding: 20px;
+    /* Add some padding inside the border */
+    width: 35%;
+    /* Set a width to control how wide the game is */
+    margin: 0 auto;
+    /* Center the game container horizontally */
+    box-sizing: border-box;
+    /* Ensure padding and border are included in the total width */
+    margin-bottom: 20px;
+}
+
 #game-board {
     position: relative;
-    /* Allows absolute positioning within */
     margin: 20px auto;
     width: fit-content;
+    /* Keeps game board as wide as its contents */
+    display: flex;
+    justify-content: center;
+    /* Centers contents horizontally */
+    transform: translateX(-10px);
+    /* Shift the board 10px to the left */
+}
+
+#current-turn {
+    display: inline-block;
+    /* Wrap the border around the text */
+    color: white;
+    /* Set the text color (you can change this if needed) */
+    background-color: blue;
+    /* Fill the inside of the border with blue */
+    margin-top: 0px;
+    padding: 10px;
+    border: 1px solid blue;
+    /* Border in blue */
+    border-radius: 5px;
+}
+
+#scoreboard {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    /* Adjust this width to your preference */
+    margin: 0px auto;
+    /* Center the scoreboard horizontally */
+    font-size: 18px;
+}
+
+.score {
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    /* Center the text inside the score box */
+    width: 100px;
+    /* Give a fixed width to score boxes */
+    margin-top: 20px;
+}
+
+#player1-score {
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
+}
+
+#player2-score {
+    border: 1px solid red;
+    background-color: red;
+    color: white;
 }
 
 .dot,
