@@ -27,13 +27,32 @@
     </div>
 
     <!-- Grid size selector -->
-    <label for="grid-size">Select Grid Size:</label>
+    <label for="grid-size">Grid Size:</label>
     <select id="grid-size">
-        <option value="5">5x5</option>
-        <option value="7" selected>7x7</option> <!-- Default to 7x7 -->
+        <option value="4" selected>3x3</option>
+        <option value="6">5x5</option>
+        <option value="8">7x7</option> <!-- Default to 7x7 -->
+    </select>
+    <label for="game-mode">Game Mode:</label>
+    <select id="game-mode">
+        <option value="PvE" selected>Player vs AI</option>
+        <option value="PvP">Player vs Player</option> <!-- Default to 7x7 -->
     </select>
 
+    <button id="start-game-btn">Start Game</button>
+
+    <button id="restart-game-btn">Restart Game</button>
+    <button id="main-menu-btn">Main Menu</button>
+
+    <div id="winnerPopup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close">&times;</span>
+            <p id="winnerMessage"></p>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script src="ai.js"></script>
 </body>
 
 </html>

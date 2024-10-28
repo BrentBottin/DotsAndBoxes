@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    background-color: lightblue;
 }
 
 #game {
@@ -8,13 +9,20 @@ body {
     /* Add the border */
     padding: 20px;
     /* Add some padding inside the border */
-    width: 35%;
+    width: 525px;
     /* Set a width to control how wide the game is */
     margin: 0 auto;
     /* Center the game container horizontally */
     box-sizing: border-box;
     /* Ensure padding and border are included in the total width */
     margin-bottom: 20px;
+    display: none;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 100%;
+    /* Ensure it doesn't overflow the screen */
+    min-width: 525px;
+    /* Prevent shrinking below a certain size */
 }
 
 #game-board {
@@ -50,7 +58,6 @@ body {
     /* Adjust this width to your preference */
     margin: 0px auto;
     /* Center the scoreboard horizontally */
-    font-size: 18px;
 }
 
 .score {
@@ -74,6 +81,61 @@ body {
     background-color: red;
     color: white;
 }
+
+#start-game-btn {
+    display: inline-block;
+    margin-top: 10px auto;
+    background-color: white;
+}
+
+#restart-game-btn {
+    display: none;
+    margin-top: 10px auto;
+    background-color: white;
+}
+
+#main-menu-btn {
+    display: none;
+    margin-top: 10px auto;
+    background-color: white;
+}
+
+/* The popup container */
+.popup {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 999;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+}
+
+/* Popup content */
+.popup-content {
+    position: relative;
+    margin: 15% auto;
+    padding: 20px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 
 .dot,
 .line-horizontal,
